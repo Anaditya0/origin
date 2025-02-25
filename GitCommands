@@ -1,0 +1,63 @@
+git version ## To check if git is installed or not
+
+git init
+    ##To instalize GIT inside a folder.
+
+git status 
+    ##Will show what files are in working area or staging area
+
+git add filename
+    # Will start tracking the untracked file
+
+git commit 
+    #Will create a next version of file, with updates in it
+
+git log
+    #Will show us the log of the versions
+
+git commit -m "add message"
+    #Will not open nano editor and the comments can be pasted in the command only 
+
+git add . 
+    #Will track all the untracked files
+
+git remote add origin https://github.com
+    #With help of this command our project will get attached to online repo, and using this command we will able to attach our repo
+
+git push origin master
+    #Will push our file to internet GIT
+
+git pull origin master
+    #With help of this we will able to download latest changes in file to our system
+
+git clone URLCopiedFromGitHUB
+    #With help of this we can clone any repo in our system
+
+tree .git
+    #It will show the structure of our git folder.
+        Data in GIT is stored in key value pair
+            Key = Shoven hash
+            Value = Binary object
+        It is hexa decimal
+        GIT takes first two characters of hash and make it a directory and give binary file 38 characters
+
+git cat-file -t <40DigitsHashValue>
+    It will show us what type of file it is blob or a tree.
+
+git cat-file -p <40DigitsHashValue>
+    It will print the output of the hash
+
+git gc 
+    Creates garbage collection and creates a pack file
+
+git stash 
+    Supposes we have created changes and we need don't want it to commit then we use git stash 
+
+git stash list
+    It will show us all the files, that has been stored in GIT
+
+git stash apply 
+    Will apply the latest stash 
+
+git stash apply stash@{1}
+    Will bring back the specific version
